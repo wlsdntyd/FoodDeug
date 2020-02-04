@@ -31,7 +31,7 @@ body {
 }
 
 #btnBox input[type='radio']:checked+span {
-	background-color: #1ABC9C;
+	background-color: rgb(188, 45, 26);
 	color: white;
 }
 

@@ -27,5 +27,10 @@ def like(request): #좋아요 리스트 화면
 def mypage(request): #마이페이지
     return HttpResponse('<h1>마이페이지얍</h1>')
 
-def detail(request): #음식점 상세페이지
-    return HttpResponse('<h1>상세페이지얍</h1>')
+# def detail(request): #음식점 상세페이지
+#     return HttpResponse('<h1>상세페이지얍</h1>')
+
+def detail(request, food_id): #음식점 상세페이지 O
+    return HttpResponse('<h1>%s번 상세페이지얍</h1>' % food_id)
+    #후에 return render(request, 'mainapp/detail.html',{mysite의 detail.html 참고})
+#모델에 food_id 존재후 작성가능

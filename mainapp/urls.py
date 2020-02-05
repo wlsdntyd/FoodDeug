@@ -6,6 +6,7 @@ urlpatterns = [
     path('signin/', views.signin, name='signin'),
     path('swipe/', views.swipe, name='swipe'),
     path('mypage/', views.mypage, name='mypage'),
-    path('detail/<int:food_id>', views.detail, name='detail'),
+    path('detail/<int:r_code>', views.detail, name='detail'),
     path('like/', views.like, name='like'),
+    path('about/', views.about, name='about'),
 ]

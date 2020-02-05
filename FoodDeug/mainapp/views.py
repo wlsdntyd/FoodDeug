@@ -28,7 +28,7 @@ def mypage(request): #마이페이지
     return render(request, 'mainapp/mypage.html', {})
 
 def about(request): #어바웃 페이지
-    return HttpResponse(request, 'mainapp/about.html', {})
+    return render(request, 'mainapp/about.html', {})
 
 def detail(request, r_code): #음식점 상세페이지 O
     return render(request, 'mainapp/detail/%s.html' % r_code,{})

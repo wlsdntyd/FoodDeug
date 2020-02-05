@@ -63,6 +63,7 @@ class Restaurant(models.Model):
     r_img = models.CharField(max_length=200, blank=True, null=True)
     des = models.CharField(max_length=200, blank=True, null=True)
     address = models.CharField(max_length=200, blank=True, null=True)
+    address_road = models.CharField(max_length=200, blank=True, null=True)
     latitude = models.FloatField(db_column='Latitude', blank=True, null=True)  # Field name made lowercase.
     longitude = models.FloatField(blank=True, null=True)
     closetime = models.CharField(max_length=20, blank=True, null=True)
@@ -88,3 +89,4 @@ class Setting(models.Model):
 
     class Meta:
         db_table = 'setting'
+

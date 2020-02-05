@@ -6,7 +6,6 @@ class Favorite(models.Model):
     r_code = models.ForeignKey('Restaurant', models.DO_NOTHING, db_column='r_code', blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'favorite'
 
 
@@ -16,7 +15,6 @@ class Img(models.Model):
     r_code = models.ForeignKey('Restaurant', models.DO_NOTHING, db_column='r_code', blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'img'
 
 
@@ -27,7 +25,6 @@ class Like(models.Model):
     member = models.ForeignKey('Member', models.DO_NOTHING, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'like'
 
 
@@ -40,7 +37,6 @@ class Member(models.Model):
     pi = models.CharField(max_length=200, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'member'
 
 
@@ -49,7 +45,6 @@ class Menu(models.Model):
     r_code = models.ForeignKey('Restaurant', models.DO_NOTHING, db_column='r_code', blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'menu'
 
 
@@ -58,7 +53,6 @@ class Recommend(models.Model):
     r_code = models.ForeignKey('Restaurant', models.DO_NOTHING, db_column='r_code', blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'recommend'
 
 
@@ -75,7 +69,6 @@ class Restaurant(models.Model):
     number = models.CharField(max_length=20, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'restaurant'
 
 
@@ -87,7 +80,6 @@ class Review(models.Model):
     member = models.ForeignKey(Member, models.DO_NOTHING, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'review'
 
 
@@ -95,5 +87,4 @@ class Setting(models.Model):
     member = models.ForeignKey(Member, models.DO_NOTHING, blank=True, null=True)
 
     class Meta:
-        managed = False
         db_table = 'setting'

@@ -1,27 +1,36 @@
-  {%extends 'mainapp/common.html' %}
-  {% block content%}
-  <!-- Masthead -->
-  <header class="masthead bg-primary text-white text-center">
-    <div class="container d-flex align-items-center flex-column">
+{%extends 'mainapp/common.html' %}
+{% block content%}
+<!-- Masthead -->
+<header class="masthead bg-primary text-white text-center">
+  <div class="container d-flex align-items-center flex-column">
 
-      <!-- Masthead Avatar Image -->
-      <img class="masthead-avatar mb-5" src="/static/mainapp/img/avataaars.svg" alt="">
+    <!-- Masthead Avatar Image -->
+    <img class="masthead-avatar mb-5" src="/static/mainapp/img/avataaars.svg" alt="">
 
-      <!-- Masthead Heading -->
-      <h1 class="masthead-heading text-uppercase mb-0">Food득!</h1>
+    <!-- Masthead Heading -->
+    <h1 class="masthead-heading text-uppercase mb-0">Food득!</h1>
 
-      <!-- Icon Divider -->
-      <div class="divider-custom divider-light">
-        <div class="divider-custom-line"></div>
-        <div class="divider-custom-icon">
-          <i class="fas fa-star"></i>
-        </div>
-        <div class="divider-custom-line"></div>
+    <!-- Icon Divider -->
+    <div class="divider-custom divider-light">
+      <div class="divider-custom-line"></div>
+      <div class="divider-custom-icon">
+        <i class="fas fa-star"></i>
       </div>
-
-      <!-- Masthead Subheading -->
-      <p class="masthead-subheading font-weight-light mb-0"></p>
-
+      <div class="divider-custom-line"></div>
     </div>
-  </header>
-  {% endblock%}
+    <button class="btn btn-primary btn-block text-uppercase mb-0" id="signin" onclick="move_login()">로그인</button>
+    <button class="btn btn-primary btn-block text-uppercase mb-0" id="signup"onclick="move_new()">회원가입</button>
+    <!-- Masthead Subheading -->
+    <p class="masthead-subheading font-weight-light mb-0"></p>
+
+  </div>
+</header>
+<script>
+  function move_login() {
+    location = '/signin'
+  }
+  function move_new() {
+    location = '/signup'
+  }
+</script>
+{% endblock%}
